@@ -11,7 +11,7 @@ namespace Practice3
             Console.WriteLine("Set the lower value of the range!");
             Lower = Validator.GetValidatedInput();
 
-            Console.WriteLine("Set the upper value of the range!");
+            Console.WriteLine("\nSet the upper value of the range!");
             Upper = Validator.GetValidatedInput();
 
             if (IsRangeGoodToCreateArray(Lower, Upper))
@@ -26,13 +26,14 @@ namespace Practice3
              Console.ReadKey();
         }
 
-        private static bool IsRangeGoodToCreateArray(int lowere, int uppere)
+        private static bool IsRangeGoodToCreateArray(int lower, int upper)
         {
             return ((Upper - Lower + 1) > 10);
         }
 
         private static Array GetArrayOfNaturalNumbers(int lower, int upper)
         {
+            Console.WriteLine("\nArray is below");
             int[] numbersArray = new int[Upper - Lower + 1];
             int i = 0;
             do
@@ -55,7 +56,7 @@ namespace Practice3
                     sum = sum + array[i];
                 }
             }
-            Console.WriteLine("Sum of elements devidable on 3 and not devidable on 5 is : " + sum);
+            Console.WriteLine("\nSum of elements devidable on 3 and not devidable on 5 is : " + sum);
         }
     }
 }

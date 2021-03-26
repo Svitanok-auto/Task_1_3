@@ -9,7 +9,7 @@ namespace Practice3
 
         public static int GetValidatedInput()
         {
-            Console.WriteLine("\nWhat is the Value, should be more than 0");
+            Console.WriteLine("What is the Value, should be more than 0");
             int attempt = 0;
             while (attempt < MAX_ATTEMPTS)
             {
