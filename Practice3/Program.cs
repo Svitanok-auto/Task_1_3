@@ -4,19 +4,20 @@ namespace Practice3
 {
     class Program
     {
-        private static int Lower { get; set; }
-        private static int Upper { get; set; }
+        private static int LowerBorder { get; set; }
+        private static int UpperBorder { get; set; }
+        private static int SumOfNumbersDevidableOn3AndNotDevidableOn5 { get; set; }
         static void Main(string[] args)
         {
             Console.WriteLine("Set the lower value of the range!");
-            Lower = Validator.GetValidatedInput();
+            LowerBorder = Validator.GetValidatedInput();
 
             Console.WriteLine("\nSet the upper value of the range!");
-            Upper = Validator.GetValidatedInput();
+            UpperBorder = Validator.GetValidatedInput();
 
-            if (IsRangeGoodToCreateArray(Lower, Upper))
+            if (IsRangeGoodToCreateArray(LowerBorder, UpperBorder))
             {
-                int[] newArray = (int[])GetArrayOfNaturalNumbers(Lower, Upper);
+                int[] newArray = (int[])GetArrayOfNaturalNumbers(LowerBorder, UpperBorder);
                 GetSumOfNumbersDevidableOn3AndNotDevidableOn5(newArray);
             }
             else
@@ -26,37 +27,36 @@ namespace Practice3
              Console.ReadKey();
         }
 
-        private static bool IsRangeGoodToCreateArray(int lower, int upper)
+        private static bool IsRangeGoodToCreateArray(int lowerBorder, int upperBorder)
         {
-            return ((Upper - Lower + 1) > 10);
+            return ((UpperBorder - LowerBorder + 1) > 10);
         }
 
-        private static Array GetArrayOfNaturalNumbers(int lower, int upper)
+        private static Array GetArrayOfNaturalNumbers(int lowerBorder, int upperBorder)
         {
             Console.WriteLine("\nArray is below");
-            int[] numbersArray = new int[Upper - Lower + 1];
+            int[] numbersArray = new int[UpperBorder - LowerBorder + 1];
             int i = 0;
             do
             {
-               numbersArray[i] = Lower + i;
+               numbersArray[i] = LowerBorder + i;
                Console.WriteLine("Array element with i={0} is {1}", i, numbersArray[i]);
                i++;
             }
-            while ((Lower + i <= Upper) && (i <= Upper - Lower));
+            while ((LowerBorder + i <= UpperBorder) && (i <= UpperBorder - LowerBorder));
             return numbersArray;
         }
 
         private static void GetSumOfNumbersDevidableOn3AndNotDevidableOn5(int [] array)
         {
-            int sum = 0;
-            for (int i = 0; i < Upper - Lower; i++)
+            for (int i = 0; i < UpperBorder - LowerBorder; i++)
             {
                 if ((array[i] % 3 == 0) && (array[i] % 5 != 0))
                 {
-                    sum = sum + array[i];
+                    SumOfNumbersDevidableOn3AndNotDevidableOn5 = SumOfNumbersDevidableOn3AndNotDevidableOn5 + array[i];
                 }
             }
-            Console.WriteLine("\nSum of elements devidable on 3 and not devidable on 5 is : " + sum);
+            Console.WriteLine("\nSum of elements devidable on 3 and not devidable on 5 is : " + SumOfNumbersDevidableOn3AndNotDevidableOn5);
         }
     }
 }
