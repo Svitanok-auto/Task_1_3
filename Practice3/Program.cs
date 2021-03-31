@@ -7,7 +7,7 @@ namespace Practice3
         private static int LowerBorder { get; set; }
         private static int UpperBorder { get; set; }
         private static int SumOfNumbersDevidableOn3AndNotDevidableOn5 { get; set; }
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Set the lower value of the range!");
             LowerBorder = Validator.GetValidatedInput();

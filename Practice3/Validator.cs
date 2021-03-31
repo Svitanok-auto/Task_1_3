@@ -4,8 +4,8 @@ namespace Practice3
 {
     public static class Validator
     {
-        public static int Border { get; set; }
         public const int MAX_ATTEMPTS = 10;
+        public static int Border { get; set; }
 
         public static int GetValidatedInput()
         {
