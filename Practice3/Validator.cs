@@ -33,7 +33,7 @@ namespace Practice3
                     }
                     catch (SystemException ex)
                     {
-                        Console.WriteLine("\nIncorrect Input, error" + ex.Message);
+                        Console.WriteLine("\nIncorrect Input, error: " + ex.Message);
                         Console.WriteLine("\nTry again to populate correct border");
                         attempt++;
                     }
@@ -43,7 +43,7 @@ namespace Practice3
                     Console.WriteLine("\nIncorrect Input: Empty value is not allowed");
                 }
             }
-                return 0;
+        return 0;
         }
     }
 }
