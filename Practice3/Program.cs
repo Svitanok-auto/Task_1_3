@@ -16,7 +16,7 @@ namespace Practice3
 
             if (IsRangeGoodToCreateArray(LowerBorder, UpperBorder))
             {
-                int[] newArray = (GetArrayOfNaturalNumbers(LowerBorder, UpperBorder));
+                int[] newArray = GetArrayOfNaturalNumbers(LowerBorder, UpperBorder);
                 GetSumOfNumbersDevidableOn3AndNotDevidableOn5(newArray);
             }
             else
